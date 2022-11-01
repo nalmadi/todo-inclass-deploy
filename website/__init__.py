@@ -15,7 +15,7 @@ def create_app():
 
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'secret'
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.envron.get('DATABASE_URL')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     db.init_app(app)
 
     from .models import Note, User
