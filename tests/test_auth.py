@@ -35,5 +35,5 @@ def test_signup(client):
                                       "password2": "12345678"})
 
         print("\n\n", response.data)
-        assert response.status_code == 200
-        assert b'Redirected' in response.data
+        assert response.status_code == 302 # redirect to home page
+        assert b'Redirecting' in response.data
